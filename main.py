@@ -1,11 +1,12 @@
 from crawler import WebCrawler
 
 def main():
-    # URL de départ pour le crawling
-    start_url = "https://example.com/fr-ca/"  # Remplacez par votre URL
-    
-    # Création d'une instance du crawler
-    crawler = WebCrawler(start_url, max_depth=3)
+    # Configuration personnalisée
+    start_url = "https://www.ouellet.com/fr-ca/"
+    crawler = WebCrawler(
+        start_url=start_url,
+        max_depth=3  # Profondeur de crawling plus importante
+    )
     
     # Démarrage du crawling
     crawler.crawl()
